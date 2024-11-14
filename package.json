@@ -1,0 +1,25 @@
+{
+  "name": "visma",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true,
+  "devDependencies": {
+    "browser-sync": "^3.0.3",
+    "cssnano": "^7.0.6",
+    "del": "^6.0.0",
+    "gulp": "^5.0.0",
+    "gulp-postcss": "^10.0.0",
+    "postcss": "^8.4.49",
+    "postcss-combine-media-query": "^1.0.1",
+    "stylelint": "^16.10.0",
+    "stylelint-config-standard": "^36.0.1"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "gulp-htmlmin": "^5.0.1"
+  }
+}
