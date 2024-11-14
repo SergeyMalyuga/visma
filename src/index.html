@@ -3,9 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <meta name="theme-color" content="light dark">
+    <link rel="stylesheet" href="style.css">
+    <title>Главная страница</title>
 </head>
-<body>
-<p>Hello World</p>
+<body class="page">
+<header class="header">
+    <img class="header__logo" src="./images/logo.svg" alt="логотип">
+    <nav class="header__nav">
+        <ul class="header__nav-list">
+            <li class="header__nav-item"><a class="header__link" href=""> О компании</a></li>
+            <li class="header__nav-item"><a class="header__link" href="">Новости</a></li>
+            <li class="header__nav-item"><a class="header__link" href="">Новости</a></li>
+            <li class="header__nav-item"><a class="header__link" href="">Новости</a></li>
+            <li class="header__nav-item"><a class="header__link" href="">Новости</a></li>
+            <li class="header__nav-item"><a class="header__link" href="">Новости</a></li>
+            <li class="header__nav-item"><a class="header__link" href="">Новости</a></li>
+        </ul>
+    </nav>
+    <search>
+        <form   class="header__search-form" action="">
+            <button class="header__button-search"><img  src="images/search.png"></button>
+            <input class="header__input-search" type="search">
+        </form>
+    </search>
+    <div class="custom-select">
+        <select class="header__select">
+            <option>RU</option>
+            <option>EN</option>
+            <option>FR</option>
+        </select>
+    </div>
+</header>
+<main class="content"></main>
+<footer class="footer"></footer>
 </body>
 </html>

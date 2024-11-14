@@ -1,0 +1,12 @@
+@use "../vendor/fonts";
+@use "variables";
+@use "../blocks/page/page";
+@use "../blocks/header/header";
+@use "../blocks/header/__nav-list/nave-list";
+@use "../blocks/header/__link/link";
+@use "../blocks/header/__button-search/button-search";
+@use "../blocks/header/__select/select";
+@use "../blocks/header/__search-form/search-form";
+@use "../blocks/header/__input-search/input-search";
+@use "../blocks/header/__logo/logo";
+@use "global";

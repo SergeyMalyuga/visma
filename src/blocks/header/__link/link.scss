@@ -1,0 +1,6 @@
+@use "src/SASS/variables";
+
+.header__link {
+  text-decoration: none;
+  color: variables.$text-color;
+}
