@@ -9,6 +9,9 @@ const sass = require('gulp-sass')(require('sass'));
 const plumber = require('gulp-plumber');
 const mediaCombine = require('postcss-combine-media-query');
 const sourcemaps = require('gulp-sourcemaps');
+const babel = require('gulp-babel');
+const uglify = require('gulp-uglify');
+const terser = require('gulp-terser');
 
 function server() {
     browserSync.init({
@@ -32,7 +35,7 @@ function scss() {
         .pipe(sourcemaps.init())
         .pipe(sass.sync())
         .pipe(postcss(plugins))
-        .pipe(sourcemaps.write('.'))
+        .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('dist/'))
         .pipe(browserSync.reload({stream: true}));
 }
@@ -41,6 +44,20 @@ function scss() {
 function images() {
     return gulp.src('src/images/**/*.{jpg,jpeg,png,svg,gif,ico,webp,avif}', {encoding: false})
         .pipe(gulp.dest('dist/images'))
+        .pipe(browserSync.reload({stream: true}));
+}
+
+// function js(){
+//     return gulp.src('src/**/*.js')
+//         // .pipe(babel({presets: ['@babel/preset-env']}))
+//         .pipe(terser())
+//         .pipe(gulp.dest('dist/'))
+//         .pipe(browserSync.reload({stream: true}));
+// }
+
+function js() {
+    return gulp.src('src/**/*.js')
+        .pipe(gulp.dest('dist'))
         .pipe(browserSync.reload({stream: true}));
 }
 
@@ -54,7 +71,7 @@ function watchApp() {
     gulp.watch(['src/images/**/*.{jpg,jpeg,png,svg,gif,ico,webp,avif}'], images);
 }
 
-const build = gulp.series(clean, gulp.parallel(html, scss, images));
+const build = gulp.series(clean, gulp.parallel(html, scss, js, images));
 const watch = gulp.parallel(build, watchApp, server);
 
 exports.server = server;
@@ -63,5 +80,6 @@ exports.scss = scss;
 exports.clean = clean;
 exports.default = server;
 exports.images = images;
+exports.js = js;
 exports.build = build;
 exports.watch = watch;
