@@ -1,0 +1,7 @@
+@use 'src/SASS/variables';
+
+.first-screen__text {
+  margin-block-end: 60px;
+  line-height: 140%;
+  color: variables.$color-white;
+}

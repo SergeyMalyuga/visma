@@ -1,8 +1,19 @@
+@use 'src/SASS/variables';
+
 .header__button-search {
   max-inline-size: 25px;
   max-block-size: 25px;
-  border: 1px solid black;
+  border: none;
   background-color: transparent;
   padding: 0;
   margin: 0;
+}
+
+.header__button-search:focus {
+  outline: none;
+}
+
+.header__button-search:focus-visible {
+  outline: 2px solid variables.$focus-color;
+  border-radius: 4px;
 }

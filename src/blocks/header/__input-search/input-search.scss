@@ -1,6 +1,8 @@
+@use 'src/SASS/variables';
+
 .header__input-search {
   min-block-size: 25px;
-  border: none;
+  border: 2px solid transparent;
   border-block-end: 1px solid rgba(51, 51, 51, 0.5);
 }
 
@@ -9,5 +11,6 @@
 }
 
 .keyboard-focus {
-  border: 1px solid red;
+  border: 2px solid variables.$focus-color;
+  border-radius: 4px;
 }

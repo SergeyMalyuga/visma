@@ -8,7 +8,6 @@ function setupKeyboardFocus(input) {
 
     input.addEventListener('mousedown', event => {
         isKeyDown = false;
-        // input.classList.remove('keyboard-focus');
     });
 
     input.addEventListener('focus', event => {
@@ -17,13 +16,9 @@ function setupKeyboardFocus(input) {
         }
     })
 
-input.addEventListener('blur', event => {
-    event.target.classList.remove('keyboard-focus');
-})
+    input.addEventListener('blur', event => {
+        event.target.classList.remove('keyboard-focus');
+    })
 };
 
 export {setupKeyboardFocus};
-
-
-
-

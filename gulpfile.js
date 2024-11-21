@@ -17,7 +17,7 @@ function server() {
     browserSync.init({
         server: {baseDir: './dist'},
         port: 8080,
-        browser: ['Google Chrome'],
+        browser: ['/usr/bin/google-chrome'],
     });
 }
 
@@ -47,6 +47,12 @@ function images() {
         .pipe(browserSync.reload({stream: true}));
 }
 
+/*function fonts() {
+    return gulp.src('src/vendor/fonts/!**!/!*.{eot,woff,woff2}')
+        .pipe(gulp.dest('dist/fonts'))
+        .pipe(browserSync.reload({stream: true}));
+}*/
+
 // function js(){
 //     return gulp.src('src/**/*.js')
 //         // .pipe(babel({presets: ['@babel/preset-env']}))
@@ -69,6 +75,7 @@ function watchApp() {
     gulp.watch('src/**/*.html', html);
     gulp.watch('src/**/*.scss', scss);
     gulp.watch(['src/images/**/*.{jpg,jpeg,png,svg,gif,ico,webp,avif}'], images);
+    // gulp.watch('src/fonts/**/*.{eot,woff,woff2}', fonts());
 }
 
 const build = gulp.series(clean, gulp.parallel(html, scss, js, images));
@@ -80,6 +87,7 @@ exports.scss = scss;
 exports.clean = clean;
 exports.default = server;
 exports.images = images;
+// exports.fonts = fonts;
 exports.js = js;
 exports.build = build;
 exports.watch = watch;

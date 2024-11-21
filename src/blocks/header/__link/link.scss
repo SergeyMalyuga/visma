@@ -4,3 +4,16 @@
   text-decoration: none;
   color: variables.$text-color;
 }
+
+.header__link:focus {
+  outline: none;
+}
+
+.header__link:focus-visible {
+  outline: 2px solid variables.$focus-color;
+  border-radius: 4px;
+}
+
+.header__link:hover {
+  text-decoration: underline;
+}

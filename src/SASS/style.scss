@@ -9,4 +9,13 @@
 @use "../blocks/header/__search-form/search-form";
 @use "../blocks/header/__input-search/input-search";
 @use "../blocks/header/__logo/logo";
+@use "../blocks/content/__first-screen/first-screen";
+@use "../blocks/content/__first-screen-title/first-screen-title";
+@use "../blocks/first-screen/__text/text";
+@use "../blocks/first-screen/__description-box/description-box";
+@use "../blocks/first-screen/__link-about/link-about";
+@use "../blocks/first-screen/__cards-list/card-list";
+@use "../blocks/first-screen/__cards-box/cards-box";
+@use "../blocks/first-screen/__card/card";
+@use "../blocks/first-screen/__item/item";
 @use "global";
