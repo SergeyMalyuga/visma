@@ -1,0 +1,11 @@
+@use 'src/SASS/variables';
+
+.card__description {
+  color: variables.$color-white;
+  font-family: "PT Sans";
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 26.6px */
+}
+
