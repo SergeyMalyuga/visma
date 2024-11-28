@@ -1,18 +1,1 @@
-import {CARD_NAME, cardDescription} from "./data.js";
-
-const cardTemplate = document.querySelector('#card-template').content.querySelector('.item');
-const documentFragment = document.createDocumentFragment()
-const cardsList = document.querySelector('.first-screen__cards-list');
-
-cardDescription.forEach(cardDescription => {
-const card = cardTemplate.cloneNode(true);
-card.classList.add('first-screen__item');
-card.querySelector('.card').classList.add('first-screen__card');
-card.querySelector('p:nth-child(1)').classList.add('card__title');
-card.querySelector('p:nth-child(2)').classList.add('card__description');
-card.querySelector('.card__title').textContent = CARD_NAME;
-card.querySelector('.card__description').insertAdjacentHTML('afterbegin', cardDescription);
-documentFragment.appendChild(card);
-});
-
-cardsList.appendChild(documentFragment);
+import{CARD_NAME,cardDescription}from"./data.js";const cardTemplate=document.querySelector("#card-template").content.querySelector(".item"),documentFragment=document.createDocumentFragment(),cardsList=document.querySelector(".first-screen__cards-list");cardDescription.forEach((e=>{const t=cardTemplate.cloneNode(!0);t.classList.add("first-screen__item"),t.querySelector(".card").classList.add("first-screen__card"),t.querySelector("p:nth-child(1)").classList.add("card__title"),t.querySelector("p:nth-child(2)").classList.add("card__description"),t.querySelector(".card__title").textContent=CARD_NAME,t.querySelector(".card__description").insertAdjacentHTML("afterbegin",e),documentFragment.appendChild(t)})),cardsList.appendChild(documentFragment);

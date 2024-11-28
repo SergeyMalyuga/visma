@@ -1,0 +1,12 @@
+@use 'src/SASS/variables';
+
+.service__card {
+  display: flex;
+  flex-direction: column;
+  gap: 118px;
+  padding-block: 30px;
+  padding-inline: 35px;
+  border-radius: 20px;
+  background-color: variables.$color-purple;
+  min-inline-size: 416px;
+}

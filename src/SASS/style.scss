@@ -23,4 +23,10 @@
 @use "../blocks/content/__service/service";
 @use "../blocks/content/__service-title/service-title";
 @use "../blocks/service/__text/text" as service__text;
+@use "../blocks/service/__description-cards-box/description-cards-box";
+@use "../blocks/service/__description-card/description-card";
+@use "../blocks/service/__description-button/description-button";
+@use "../blocks/service/__cards-list/cards-list";
+@use "../blocks/service/__description-card/description-card" as service__description-card;
+@use "../blocks/service/__card/card" as service__card;
 @use "global";

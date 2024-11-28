@@ -5,4 +5,12 @@ const cardDescription = [
     'Складские<br>операции',
     'Швартовые<br>операции'];
 
-export {CARD_NAME, cardDescription};
+const cardServiceDescription = [
+    'Хранение грузов', 
+    'Швартовые операции', 
+    'Складские операции', 
+    'Агентское обслуживание судов', 
+    'Буксировка / сопровождение судов', 
+    'Погрузочно-разгрузочная деятельность'];
+
+export {CARD_NAME, cardDescription, cardServiceDescription};
